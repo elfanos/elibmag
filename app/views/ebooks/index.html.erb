@@ -1,0 +1,25 @@
+<h1>hi there</h1>
+
+<h1>Listing Elib Orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Productid</th>
+      <th>Author</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ebooks.each do |ebook| %>
+
+      <tr>
+        <td><%= ebook.productID %></td>
+        <td><%= ebook.author %></td>
+        <td><%= link_to 'Show', ebook_path(ebook) %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>

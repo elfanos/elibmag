@@ -1,0 +1,20 @@
+<p>
+  <strong>Author:</strong>
+  <%= @ebook.author %>
+</p>
+
+<p>
+  <strong>Book name:</strong>
+  <%= @ebook.description%>
+</p>
+<p>
+  <strong>Distributor:</strong>
+  <%= @ebook.distributor%>
+</p>
+<p>
+  <button><br><br>
+</p>
+  <td><%= button_to '+', {:controller => "ebooks", :action => "create", :productID => @ebook.productID, :formatGroupId => @ebook.formatGroupId} , :method=>:post  %></td>
+</p>
+<%= link_to 'Back', ebooks_path %>
+</p>
