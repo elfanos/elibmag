@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="sv">
+<head>
+<meta name="dtb:uid" content="9789197841023"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="0"/>
+<meta name="dtb:maxPageNumber" content="0"/>
+</head>
+<docTitle><text>Behovet av en ny förståelse : ansvaret för miljön, klimatet och det globala utrymmet</text></docTitle>
+<docAuthor><text>Göran Bäckstrand, Kåre Olsson &#38; Emin Tengström</text></docAuthor>
+<navMap>
+<navPoint id="cover" playOrder="1"><navLabel><text>Omslag</text></navLabel><content src="xhtml/cover.xhtml"/></navPoint>
+<navPoint id="copyright" playOrder="2"><navLabel><text>Copyright</text></navLabel><content src="xhtml/copyright.xhtml"/></navPoint>
+<navPoint id="for" playOrder="3"><navLabel><text>Förord</text></navLabel><content src="xhtml/forward.xhtml#for"/></navPoint>
+<navPoint id="ch1" playOrder="4"><navLabel><text>Kapitel 1: En bok för reflexion &#38; eftersinnande samtal</text></navLabel><content src="xhtml/01_chapter01.xhtml#ch1"/></navPoint>
+<navPoint id="ch2" playOrder="5"><navLabel><text>Kapitel 2: Klimatfrågan &#38; opinionsbildningen</text></navLabel><content src="xhtml/03_chapter03.xhtml#ch2"/></navPoint>
+<navPoint id="ch3" playOrder="6"><navLabel><text>Kapitel 3: Miljö, klimat &#38; resurstillgång</text></navLabel><content src="xhtml/04_chapter04.xhtml#ch3"/></navPoint>
+<navPoint id="ch4" playOrder="7"><navLabel><text>Kapitel 4: Ny teknik i kombination med livsstilsförändringar</text></navLabel><content src="xhtml/05_chapter05.xhtml#ch4"/></navPoint>
+<navPoint id="ch5" playOrder="8"><navLabel><text>Kapitel 5: Politikens förändrade förutsättningar &#38; roll</text></navLabel><content src="xhtml/06_chapter06.xhtml#ch5"/></navPoint>
+<navPoint id="ch6" playOrder="9"><navLabel><text>Kapitel 6: Klimatet, miljön, naturresurserna &#38; människans ansvar</text></navLabel><content src="xhtml/07_chapter07.xhtml#ch6"/></navPoint>
+<navPoint id="ch7" playOrder="10"><navLabel><text>Kapitel 7: Om behovet av en ny förståelse</text></navLabel><content src="xhtml/08_chapter08.xhtml#ch7"/></navPoint>
+<navPoint id="ch8" playOrder="11"><navLabel><text>Kapitel 8: Kort sammanfattning</text></navLabel><content src="xhtml/09_chapter09.xhtml#ch8"/></navPoint>
+<navPoint id="ch9" playOrder="12"><navLabel><text>Litteraturlista</text></navLabel><content src="xhtml/10_chapter10.xhtml#ch9"/></navPoint>
+</navMap>
+</ncx>

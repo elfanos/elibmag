@@ -1,45 +1,283 @@
 
-<html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>Contained ePub Example</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <link rel="stylesheet" href="basic.css">
-
-        <!-- EPUBJS Renderer -->
-        <script src="../build/epub.js"></script>
-
-        <!-- Zip JS -->
-        <script src="../build/libs/zip.min.js"></script>
-
-        <script>
-
-            // EPUBJS.filePath = "../build/libs/zip/";
-            EPUBJS.cssPath = "../reader/css/";
-
-        </script>
 
         <script>
             "use strict";
-
-            var Book = ePub("/test.epub");
-
+            //var url = $("elibget")[0];
+            var Book = ePub("<%=@ebookUrl%>");
+            //var Book = ePub("magazinos-ebook.s3.eu-central-1.amazonaws.com");
         </script>
-    </head>
-    <body>
+      <script>
+
+        var dataEpub
+        var test
+
+        function initEpub(){
+          var dataEpub = ePub(teste);
+
+          dataEpub.renderTo("teste");
+        }
+
+
+      </script>
+
         <div id="main">
           <div id="prev" onclick="Book.prevPage();" class="arrow">‹</div>
           <div id="area"></div>
           <div id="next" onclick="Book.nextPage();" class="arrow">›</div>
         </div>
+        <!-- <div>
+        <object id="elibget" type="application/epub+zip" data="https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">
+          </object>
+        </div> -->
+        <div id= "info">
+          <input id = "btnSubmit" type="submit" value="Release"/>
+        </div>
+        <div id= "test">
+        </div>
+        <!-- <div>
+          <input id = "btnSubmit" type="submit" value="Release"/>
+        </div> -->
+
+        <!-- <div id="teste"></div>
+            <script src="https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ=="></script> -->
+            <!-- <div id="elibcontent">
+                <object id="elibget" type="application/epub+zip" data="https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==">
+                  </object>
+              </div> -->
+
+              <!-- <script>
+                $("#elibget")[0];
+              </script> -->
+      <!-- <script>
+      $(document).ready(function() {
+          $("#btnSubmit").click(function(){
+              alert("button");
+      $.ajax({
+                xhrFields: {
+                  withCredentials: true
+          },
+            type: "GET",
+              url: "https://delivery-11.elib.se/?ticket=13c0f3c0-6a4e-414a-8b2a-498e810b17ca&distributionsystem=3"
+
+                    });
+
+              // Using XMLHttpRequest
+              var xhr = new XMLHttpRequest();
+              xhr.open("GET", "https://delivery-11.elib.se/?ticket=13c0f3c0-6a4e-414a-8b2a-498e810b17ca&distributionsystem=3", true);
+              xhr.withCredentials = true;
+              xhr.onload = function () {
+                  console.log(xhr.responseText);
+                  };
+              xhr.send();
+
+          });
+      });
+
+    </script> -->
 
         <script>
 
             Book.renderTo("area");
 
         </script>
-    </body>
-</html>
+        <script>
+        $(document).ready( function() {
+          $("#load_home").on("click", function() {
+            $("#content").load("content.html");
+          });
+        });
+    </script>
+    <!-- <script>
+    $.ajax({
+      type: "GET",
+      dataType: "application",
+      url = 'https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==',
+      crossDomain: true,
+      xhrFields: {
+        withCredentials: true
+      }
+    })
+    .done(function(data)){
+      console.log("done")
+    })
+    .fail(function(xhr, textStatus, errorThrown){
+      alert(xhr.responseText)
+      alert(textStatus);x
+    });
+    </script> -->
+
+    <!-- <script>
+
+    var string
+    $.ajax({
+            type: 'GET',
+            url: 'https://www.epubbooks.com/downloads/3836',
+            //data: 'https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==',
+            beforeSend: function(request){
+          request.setRequestHeader('Access-Control-Allow-Origin', "*");
+          request.setRequestHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+          request.setRequestHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept')
+
+        },
+            success: function (result) {
+                  window.alert("success!!");
+            },
+            error: function (exception){
+              window.alert("something wrong!" + exception);
+
+            }
+          }).error(function(data){
+              console.log('Error:', data);
+          });
+
+
+    $(document).ready(function() {
+              $("#btnSubmit").click(function(){
+                  alert("button");
+                  console.log("jaman")
+
+            });
+        });
+
+
+        </script> -->
+<!-- <script>
+        // Create the XHR object.
+          function createCORSRequest(method, url) {
+            var xhr = new XMLHttpRequest();
+            if ("withCredentials" in xhr) {
+    // XHR for Chrome/Firefox/Opera/Safari.
+        xhr.open(method, url, true);
+      } else if (typeof XDomainRequest != "undefined") {
+    // XDomainRequest for IE.
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+      } else {
+    // CORS not supported.
+        xhr = null;
+      }
+      return xhr;
+    }
+
+// Helper method to parse the title tag from the response.
+    function getTitle(text) {
+      return text.match('<title>(.*)?</title>')[1];
+    }
+
+// Make the actual CORS request.
+    function makeCorsRequest() {
+  // All HTML5 Rocks properties support CORS.
+      var url = 'http://updates.html5rocks.com';
+
+      var xhr = createCORSRequest('GET', url);
+      if (!xhr) {
+        alert('CORS not supported');
+        return;
+      }
+
+  // Response handlers.
+      xhr.onload = function() {
+        var text = xhr.responseText;
+        var title = getTitle(text);
+        alert('Response from CORS request to ' + url + ': ' + title);
+      };
+
+      xhr.onerror = function() {
+        alert('Woops, there was an error making the request.');
+      };
+
+      xhr.send();
+    }
+
+var url = 'https://www.epubbooks.com/downloads/3836';
+var xhr = createCORSRequest('GET', url);
+xhr.send();
+
+</script> -->
+    <!-- <script>
+    var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==", true);
+xhr.onload = function () {
+    console.log(xhr.responseText);
+};
+xhr.send();
+    </script> -->
+    <!-- <script>
+        var request = new XMLHttpRequest();
+        var params = "action=something";
+
+        request.open('POST', "https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==", true);
+        request.onreadystatechange = function() {if (request.readyState==4) alert("It worked!");};
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.setRequestHeader("Content-length", params.length);
+        request.setRequestHeader("Connection", "close");
+        request.send(params);
+    </script> -->
+    <!-- <script>
+    read=(function(){
+      var r=new XMLHttpRequest();
+      return function(src){
+          r.open('GET', src, false);
+          r.send();
+          if(r.status!=200 && r.status!=0){//E-books return 0 for some reason?
+              //REPORT ERROR
+            return null;
+          }
+          return r.responseText;
+      };
+    }());
+    </script> -->
+
+      <!-- <script>
+
+        $(document).ready(function() {
+            $("#btnSubmit").click(function(){
+                alert("button");
+                window.location.href = "https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xlRfyU4hDDRxwmFUdlM300leqzxKSXbPUIFRTzaf4aW/Nqw5TJTLFLICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAKNdFLRmFoY+gJIy3q08THI7VnB2Yr8HB68EPg3LAVaRaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==";
+
+          });
+      });
+    </script> -->
+    <script>
+
+      // $(document).ready(function() {
+      //     $("#btnSubmit").click(function(){
+      //         alert("button");
+      //         alert("woot")
+      //         $.get('https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==', function(data) {
+      //             alert(data);
+      //           })
+      //
+      //           $.ajax({
+      //               url: 'https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==',
+      //               type: 'POST',
+      //               success: function(data) {
+      //                 window.location = data;
+      //               }
+      //             });
+      //         })
+      //       });
+
+    //       $.ajax({
+    //           xhrFields: {
+    //             withCredentials: true
+    //     },
+    //       type: "GET",
+    //         url: "https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ=="
+    //           console.log(data);
+    //           console.log("hej done function")
+    //               });
+    //
+    //         // Using XMLHttpRequest
+    //         var xhr = new XMLHttpRequest();
+    //         xhr.open("GET", "https://webservices.elib.se/v2/Fulfillment/?data=oLmSIPAVxrhlcN8mnYkjYg/fyIAuA1+xUYzvPXg0/D9wmFUdlM300leqzxKSXbPUIFRTzaf4aW/cdWvYiveIiICDVPxeFVi6YQTTaQNfPk28YiuPwnfbvqazFbdZAOFbXLGOF94HB2vbKiYbztVEsGzgkpU1Dgv/sy1RexVuZeBfrdTSr9aIYF6mqxcLOgLMr+GT1ikyyKdWmKI62+stFT5v2F0XQ5bWvi9DwBIZWGToRFf1Lpn16iEtyaxALkfl1fv4OkaezJFSd60RXkvd8H6YSKff3zVAzQgrKemhyEcTC8RqutvAfOJbYJ5cAPOHjaHL6HRj8OtaTOeteJkFQbc3EX0tARcjPDIre2UpZFnpQDmcb6nPNQ==", true);
+    //         xhr.withCredentials = true;
+    //         xhr.onload = function () {
+    //             console.log(xhr.responseText);
+    //             };
+    //         xhr.send();
+    //
+    //     });
+    // });
+  </script>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="p9789197841023">       
+<metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">  
+			<dc:title>Behovet av en ny förståelse : ansvaret för miljön, klimatet och det globala utrymmet</dc:title>
+        <dc:creator>Göran Bäckstrand, Kåre Olsson &#38; Emin Tengström</dc:creator>
+        <dc:creator opf:role="aut" opf:file-as="Bäckstrand, Göran">Göran Bäckstrand</dc:creator>
+        <dc:creator opf:role="aut" opf:file-as="Olsson, Kåre">Kåre Olsson</dc:creator>
+        <dc:creator opf:role="aut" opf:file-as="Tengström, Emin">Emin Tengström</dc:creator>
+			<dc:identifier id="p9789197841023">9789197841023</dc:identifier>
+			<dc:date>2012</dc:date>
+			<dc:type>Text</dc:type>
+			<dc:language>sv</dc:language>
+			<dc:publisher>Bokförlaget Blenda</dc:publisher>
+                        <dc:format>142 pages</dc:format>
+			<dc:rights>All rights reserved</dc:rights>
+			<meta name="cover" content="My_Cover"/>
+	<meta name="download_id" content="50196984" />
+<meta name="elib_hash" content="7e077671cef7f6d89f65c12a05da7506" />
+</metadata>         
+	<manifest>         
+	<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+	<item id="css" href="styles/stylesheet.css" media-type="text/css"/>
+	<item id="Cover" href="xhtml/cover.xhtml" media-type="application/xhtml+xml"/>
+        <item id="copyright" href="xhtml/copyright.xhtml" media-type="application/xhtml+xml"/>
+        <item id="fm" href="xhtml/fm.xhtml" media-type="application/xhtml+xml"/>
+        <item id="forward" href="xhtml/forward.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter01" href="xhtml/01_chapter01.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter02" href="xhtml/02_chapter02.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter03" href="xhtml/03_chapter03.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter04" href="xhtml/04_chapter04.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter05" href="xhtml/05_chapter05.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter06" href="xhtml/06_chapter06.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter07" href="xhtml/07_chapter07.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter08" href="xhtml/08_chapter08.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter09" href="xhtml/09_chapter09.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter10" href="xhtml/10_chapter10.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter11" href="xhtml/11_chapter11.xhtml" media-type="application/xhtml+xml"/>
+        <item id="My_Cover" href="images/cover.jpg" media-type="image/jpeg"/>
+        <item id="pg142" href="images/pg142.jpg" media-type="image/jpeg"/>
+</manifest>     
+        <spine toc="ncx">           
+<itemref idref="Cover"/>
+<itemref idref="copyright" />
+<itemref idref="fm" />
+<itemref idref="forward" />
+<itemref idref="chapter01" />
+<itemref idref="chapter02" />
+<itemref idref="chapter03" />
+<itemref idref="chapter04" />
+<itemref idref="chapter05" />
+<itemref idref="chapter06" />
+<itemref idref="chapter07" />
+<itemref idref="chapter08" />
+<itemref idref="chapter09" />
+<itemref idref="chapter10" />
+<itemref idref="chapter11" />
+        </spine>          
+</package>   

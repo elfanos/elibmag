@@ -1788,7 +1788,7 @@ EPUBJS.Book.prototype.open = function(bookPath, forceReload){
 			opened = new RSVP.defer();
 
 	this.settings.bookPath = bookPath;
-
+  //console.log("first"+ new XMLSerializer().serializeToString(packageXml.documentElement));
 	if(this.settings.contained || this.isContained(bookPath)){
 
 		this.settings.contained = this.contained = true;
@@ -1813,6 +1813,8 @@ EPUBJS.Book.prototype.open = function(bookPath, forceReload){
 			var identifier = book.packageIdentifier(packageXml);
 			var restored = book.restore(identifier);
 
+
+
 			if(!restored) {
 				book.unpack(packageXml);
 			}
@@ -1831,7 +1833,7 @@ EPUBJS.Book.prototype.open = function(bookPath, forceReload){
 	}
 
 	this._registerReplacements(this.renderer);
-
+  console.log("first"+ epubpackage);
 	return opened.promise;
 
 };
@@ -1842,7 +1844,7 @@ EPUBJS.Book.prototype.loadPackage = function(_containerPath){
 			containerPath = _containerPath || "META-INF/container.xml",
 			containerXml,
 			packageXml;
-
+  console.log(containerPath+ "hej")
 	if(!this.settings.packageUrl) { //-- provide the packageUrl to skip this step
 		packageXml = book.loadXml(book.bookUrl + containerPath).
 			then(function(containerXml){
@@ -1859,6 +1861,7 @@ EPUBJS.Book.prototype.loadPackage = function(_containerPath){
 	}
 
 	packageXml.catch(function(error) {
+    console.log("cath");
 		// handle errors in either of the two requests
 		console.error("Could not load book at: "+ containerPath);
 		book.trigger("book:loadFailed", containerPath);
@@ -1876,9 +1879,10 @@ EPUBJS.Book.prototype.packageIdentifier = function(packageXml){
 EPUBJS.Book.prototype.unpack = function(packageXml){
 	var book = this,
 			parse = new EPUBJS.Parser();
-
+      console.log("cl");
+      console.log("hej");
 	book.contents = parse.packageContents(packageXml, book.settings.contentsPath); // Extract info from contents
-
+console.log("epubbug");
 	book.manifest = book.contents.manifest;
 	book.spine = book.contents.spine;
 	book.spineIndexByURL = book.contents.spineIndexByURL;
@@ -1902,7 +1906,6 @@ EPUBJS.Book.prototype.unpack = function(packageXml){
 	book.ready.cover.resolve(book.contents.cover);
 
 	book.locations = new EPUBJS.Locations(book.spine, book.store, book.settings.withCredentials);
-
 	//-- Load the TOC, optional; either the EPUB3 XHTML Navigation file or the EPUB2 NCX file
 	if(book.contents.navPath) {
 		book.settings.navUrl = book.settings.contentsPath + book.contents.navPath;
@@ -2204,6 +2207,7 @@ EPUBJS.Book.prototype.unlistenToRenderer = function(renderer){
 
 //-- Choose between a request from store or a request from network
 EPUBJS.Book.prototype.loadXml = function(url){
+  console.log("xml");
 	if(this.settings.fromStorage) {
 		return this.store.getXml(url, this.settings.encoding);
 	} else if(this.settings.contained) {
@@ -3403,6 +3407,7 @@ EPUBJS.core.request = function(url, type, withCredentials) {
         // If this.responseXML wasn't set, try to parse using a DOMParser from text
         if(!this.responseXML){
           r = new DOMParser().parseFromString(this.response, "application/xml");
+
         } else {
           r = this.responseXML;
         }
@@ -3417,6 +3422,7 @@ EPUBJS.core.request = function(url, type, withCredentials) {
 			if(type == 'html'){
 				if(!this.responseXML){
           r = new DOMParser().parseFromString(this.response, "text/html");
+
         } else {
           r = this.responseXML;
         }
@@ -4366,7 +4372,6 @@ EPUBJS.EpubCFI.prototype.generateCfiFromHref = function(href, book) {
   var deferred = new RSVP.defer();
   var epubcfi = new EPUBJS.EpubCFI();
   var spineItem;
-
   if(typeof spinePos !== "undefined"){
     spineItem = book.spine[spinePos];
     loaded = book.loadXml(spineItem.url);
@@ -4552,21 +4557,21 @@ EPUBJS.EpubCFI.prototype.isCfiString = function(target) {
 };
 
 EPUBJS.Events = function(obj, el){
-	
+
 	this.events = {};
-	
+
 	if(!el){
 		this.el = document.createElement('div');
 	}else{
 		this.el = el;
 	}
-	
+
 	obj.createEvent = this.createEvent;
 	obj.tell = this.tell;
 	obj.listen = this.listen;
 	obj.deafen = this.deafen;
 	obj.listenUntil = this.listenUntil;
-	
+
 	return this;
 };
 
@@ -4612,12 +4617,12 @@ EPUBJS.Events.prototype.deafen = function(evt, func){
 
 EPUBJS.Events.prototype.listenUntil = function(OnEvt, OffEvt, func, bindto){
 	this.listen(OnEvt, func, bindto);
-	
+
 	function unlisten(){
 		this.deafen(OnEvt, func);
 		this.deafen(OffEvt, unlisten);
 	}
-	
+
 	this.listen(OffEvt, unlisten, this);
 };
 EPUBJS.hooks = {};
@@ -5157,7 +5162,7 @@ EPUBJS.Pagination.prototype.process = function(pageList){
 		this.pages.push(item.page);
 		this.locations.push(item.cfi);
 	}, this);
-	
+
 	this.pageList = pageList;
 	this.firstPage = parseInt(this.pages[0]);
 	this.lastPage = parseInt(this.pages[this.pages.length-1]);
@@ -5166,12 +5171,12 @@ EPUBJS.Pagination.prototype.process = function(pageList){
 
 EPUBJS.Pagination.prototype.pageFromCfi = function(cfi){
 	var pg = -1;
-	
+
 	// Check if the pageList has not been set yet
 	if(this.locations.length === 0) {
 		return -1;
 	}
-	
+
 	// TODO: check if CFI is valid?
 
 	// check if the cfi is in the location list
@@ -5290,17 +5295,23 @@ EPUBJS.Parser.prototype.packageContents = function(packageXml, baseUrl){
 	var spineIndexByURL;
 	var metadata;
 
+  //console.log("parser"+ baseUrl + packageXml);
 	if(baseUrl) this.baseUrl = baseUrl;
-
+  //console.log("parser"+ baseUrl + new XMLSerializer().serializeToString(packageXml.documentElement));
+  console.log(this.baseUrl);
 	if(!packageXml) {
 		console.error("Package File Not Found");
 		return;
 	}
 
 	metadataNode = packageXml.querySelector("metadata");
-	if(!metadataNode) {
+  //console.log(packageXml);
+  if(!metadataNode) {
 		console.error("No Metadata Found");
-		return;
+    var metaDocument = $.parseXML('<metadata xmlns="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><meta name="cover" content="cover"/><dc:title>Hypnotisörens hemligheter</dc:title><dc:creator>Fredrik Praesto</dc:creator><dc:language xsi:type="dcterms:RFC3066">sv</dc:language><dc:rights>© 2011 by Fredrik Praesto</dc:rights><dc:publisher>Bokförlaget Bonnier Existens</dc:publisher><dc:identifier id="bookid">9789143512861</dc:identifier><meta name="download_id" content="50192102"/><meta name="elib_hash" content="6c1c4fe7ee33cdbdc2dcbcf7bf577611"/></metadata>');
+    metadataNode = metaDocument.querySelector("metadata");
+    //console.log(metadataNode);
+    //return;
 	}
 
 	manifestNode = packageXml.querySelector("manifest");

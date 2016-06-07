@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="sv">
+<head>
+<meta name="dtb:uid" content="9789185201099"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="0"/>
+<meta name="dtb:maxPageNumber" content="0"/>
+</head>
+<docTitle><text>Barnen ifrån Frostmofjället</text></docTitle>
+<docAuthor><text>Laura Fitinghoff</text></docAuthor>
+<navMap>
+<navPoint id="cover" playOrder="1"><navLabel><text>Omslag</text></navLabel><content src="xhtml/cover.xhtml"/></navPoint>
+<navPoint id="title" playOrder="2"><navLabel><text>Titel</text></navLabel><content src="xhtml/title.xhtml"/></navPoint>
+<navPoint id="copyright" playOrder="3"><navLabel><text>Copyright</text></navLabel><content src="xhtml/copyright.xhtml"/></navPoint>
+<navPoint id="ch1" playOrder="4"><navLabel><text>Nödår och barkbröd</text></navLabel><content src="xhtml/01_chapter01.xhtml#ch1"/></navPoint>
+<navPoint id="ch2" playOrder="5"><navLabel><text>Första kapitlet: Sju små värnlösa</text></navLabel><content src="xhtml/02_chapter02.xhtml#ch2"/></navPoint>
+</navMap>
+</ncx>

@@ -166,7 +166,7 @@ module Elib
           @productArray <<  product
         end
       end
-      return @productArray
+      return @everyProductID, @everyFormatID
     end
   end
 
@@ -176,8 +176,8 @@ module Elib
         @userID = userID
       end
       def get_books
-        #test orderID 15547534
-        @jsonValue = Elib::ElibAPI.get_order_from_elibAPI(15565760)
+        #test orderID 15602899
+        @jsonValue = Elib::ElibAPI.get_order_from_elibAPI(15602899)
 
         #puts 'Le value to fix', @jsonValue
 
@@ -263,7 +263,7 @@ module Elib
       ##Intialize communication with API
       productHandler.insert_product_to_list(productContainer)
 
-      Elib::ElibAPI.post_order_to_elib_api(13, productHandler.get_product_in_array_of_hashes)
+      Elib::ElibAPI.post_order_to_elib_api(40, productHandler.get_product_in_array_of_hashes)
 
     end
     def save_order
@@ -302,7 +302,12 @@ module Elib
     end
     def self.post_order_to_elib_api(order_id, productInArrayOfHash)
       handler = Elib::ProductHandler.new
-      checksum_of_every_parameters = Elib::ElibAPI.post_checksum(SERVICE_SECRET,SERVICE_ID,handler.serialize_product_for_order(productInArrayOfHash),order_id)
+      productID , formatID = handler.serialize_product_for_order(productInArrayOfHash)
+
+      puts 'array', productID
+      puts 'array', formatID
+
+      checksum_of_every_parameters = Elib::ElibAPI.post_checksum(SERVICE_SECRET,SERVICE_ID,productID,formatID ,order_id)
       puts 'check sum para', checksum_of_every_parameters
       responseorder =RestClient::Request.execute(method: :post, url: 'https://webservices.elib.se/shop/v3.0/ordergroups',:payload => {:ServiceID => SERVICE_ID, :ServiceKey => SERVICE_SECRET_CHECKSUM, :OrderGroupID => order_id, :Products => productInArrayOfHash, :Checksum => checksum_of_every_parameters}.to_json,
                             headers: {:content_type => 'application/json', :accept => 'application/json'})
@@ -319,21 +324,23 @@ module Elib
       puts 'ordeID', value
       return value
     end
-    def self.post_checksum(serviceSecret,serviceID, productInArrayOfHash,order_id)
+    def self.post_checksum(serviceSecret,serviceID, productID,formatID, orderID)
 
       sumOfPara= nil
+      onevalue = nil
+      secondValue = nil
       #sum_of_every_parameters = "2399123451005450100EWKk16eqvDd9lmNI2oHYcOfhprAzBnxLG73VPTXutwQ4R8FUiS"
-      sumOfPara = serviceID.to_s+order_id.to_s+123.to_s+124.to_s+serviceSecret,serviceID
+      sumOfPara = serviceID.to_s+orderID.to_s+productID.to_s+formatID.to_s+serviceSecret.to_s
       puts 'checkt the para', sumOfPara
       checkSumOfEveryPara = Digest::MD5.hexdigest(sumOfPara.to_s)
 
     end
     def self.run_test_on_get_products(jsonValue)
-      firstBook = Elib::EbookContainer.new(1001714,100,	"Martin Widmark"	,"The Mummy Mystery", "Bonnier")
-      secondBook = Elib::EbookContainer.new(1001826, 100, "Ingrid Sandhagen","Lilla Q","Bonnier")
+      firstBook = Elib::EbookContainer.new(1000114,100,	"livet va"	,"prove", "Beded")
+      #secondBook = Elib::EbookContainer.new(1001826, 100, "Ingrid Sandhagen","Lilla Q","Bonnier")
       bookHandler = Elib::EbookHandler.new
       bookHandler.insert_product_to_list(firstBook)
-      bookHandler.insert_product_to_list(secondBook)
+      #bookHandler.insert_product_to_list(secondBook)
 
       puts 'check if right', jsonValue["Result"]["NumberOfProducts"]
       jsonValue["Result"]["NumberOfProducts"] = 2

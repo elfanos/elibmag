@@ -7,6 +7,12 @@ Rails.application.routes.draw do
  resources :ebooks
  resources :orders
  resources :ebook_reader
+ resources :cors
+
+  match '/', :to => proc {|env| [200, {'Content-Type' => 'text/plain'}, ["Hello world"]] },
+             :via => [:get, :post, :put, :delete, :options, :head, :patch]
+  
+  match '*path', via: [:options], to:  lambda {|_| [204, {'Content-Type' => 'text/plain'}, []]}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

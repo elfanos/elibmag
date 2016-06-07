@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="bookid" version="2.0">       
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
+		<meta name="cover" content="cover"/>
+		<dc:title>Hypnotis&#246;rens hemligheter</dc:title>
+		<dc:creator>Fredrik Praesto</dc:creator>
+		<dc:language xsi:type="dcterms:RFC3066">sv</dc:language>
+		<dc:rights>&#169; 2011 by Fredrik Praesto</dc:rights>
+		<dc:publisher>Bokf&#246;rlaget Bonnier Existens</dc:publisher>
+		<dc:identifier id="bookid">9789143512861</dc:identifier>
+	<meta name="download_id" content="50192102" />
+<meta name="elib_hash" content="6c1c4fe7ee33cdbdc2dcbcf7bf577611" />
+</metadata>     
+	<manifest> 
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+		<item id="css" href="stylesheet.css" media-type="text/css"/>
+		<item id="A9789143508796_FrontCover" href="9789143508796_FrontCover.html" media-type="application/xhtml+xml"/>
+		<item id="copyright" href="copyright.html" media-type="application/xhtml+xml"/>
+		<item id="fm" href="fm01.html" media-type="application/xhtml+xml"/>
+		<item id="fm1" href="fm02.html" media-type="application/xhtml+xml"/>
+		<item id="fm2" href="fm03.html" media-type="application/xhtml+xml"/>
+		<item id="fm3" href="fm04.html" media-type="application/xhtml+xml"/>
+		<item id="fm4" href="fm05.html" media-type="application/xhtml+xml"/>
+		<item id="fm5" href="fm06.html" media-type="application/xhtml+xml"/>
+		<item id="chap01" href="chap01.html" media-type="application/xhtml+xml"/>
+		<item id="chap02" href="chap02.html" media-type="application/xhtml+xml"/>
+		<item id="chap03" href="chap03.html" media-type="application/xhtml+xml"/>
+		<item id="chap04" href="chap04.html" media-type="application/xhtml+xml"/>
+		<item id="chap05" href="chap05.html" media-type="application/xhtml+xml"/>
+		<item id="chap06" href="chap06.html" media-type="application/xhtml+xml"/>
+		<item id="chap07" href="chap07.html" media-type="application/xhtml+xml"/>
+		<item id="chap08" href="chap08.html" media-type="application/xhtml+xml"/>
+		<item id="chap09" href="chap09.html" media-type="application/xhtml+xml"/>
+		<item id="chap10" href="chap10.html" media-type="application/xhtml+xml"/>
+		<item id="cover" href="images/9789143508796_FrontCover.jpg" media-type="image/jpeg"/>
+		<item id="page" href="page-template.xpgt" media-type="application/vnd.adobe-page-template+xml"/>
+		<item id="I106_img01" href="images/106_img01.jpg" media-type="image/jpeg"/>
+		<item id="I106_img02" href="images/106_img02.jpg" media-type="image/jpeg"/>
+		<item id="I1_img01" href="images/1_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I2_img01" href="images/2_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I36_img01" href="images/36_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I3_img01" href="images/3_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I44_img01" href="images/44_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I4_img01" href="images/4_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I50_img01" href="images/50_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I5_img01" href="images/5_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I92_img01" href="images/92_img01.jpg" media-type="image/jpeg"/>	
+		<item id="I92_img02" href="images/92_img02.jpg" media-type="image/jpeg"/>	
+		<item id="I92_img03" href="images/92_img03.jpg" media-type="image/jpeg"/>	
+		<item id="Ilogo" href="images/logo.jpg" media-type="image/jpeg"/>		
+	</manifest>   
+	<spine toc="ncx">   
+		<itemref idref="A9789143508796_FrontCover"/>
+		<itemref idref="fm5"/>
+		<itemref idref="chap01"/>
+		<itemref idref="chap02"/>
+		<itemref idref="chap03"/>
+		<itemref idref="chap04"/>
+		<itemref idref="chap05"/>
+		<itemref idref="chap06"/>
+		<itemref idref="chap07"/>
+		<itemref idref="chap08"/>
+		<itemref idref="chap09"/>
+		<itemref idref="chap10"/>
+		<itemref idref="copyright"/>
+	</spine>          
+</package>   

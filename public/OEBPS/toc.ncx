@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+	<head>
+		<meta name="dtb:uid" content="9789143512861"/>
+		<meta name="dtb:depth" content="1"/>
+		<meta name="dtb:totalPageCount" content="0"/>
+		<meta name="dtb:maxPageNumber" content="0"/>
+	</head>
+	<docTitle>
+		<text>Hypnotis&#246;rens hemligheter</text>
+	</docTitle>
+<docAuthor>
+			 <text>Fredrik Praesto</text>
+</docAuthor>
+<navMap>
+
+<navPoint id="navpoint-1" playOrder="1">
+		<navLabel>
+			<text>Omslag</text>
+		</navLabel>
+		<content src="9789143508796_FrontCover.html"/>
+	</navPoint>
+<navPoint id="navpoint-2" playOrder="2">
+		<navLabel>
+			<text>Dedikation</text>
+		</navLabel>
+		<content src="fm06.html"/>
+	</navPoint>
+<navPoint id="navpoint-3" playOrder="3">
+		<navLabel>
+			<text>UTMANA DINA BEGR&#x00C4;NSNINGAR</text>
+		</navLabel>
+		<content src="chap02.html"/>
+	</navPoint>
+<navPoint id="navpoint-4" playOrder="4">
+		<navLabel>
+			<text>TA MAKTEN &#x00D6;VER DITT OMEDVETNA</text>
+		</navLabel>
+		<content src="chap03.html"/>
+	</navPoint>
+<navPoint id="navpoint-5" playOrder="5">
+		<navLabel>
+			<text>HELHETSMODELLEN &#x2013; TANKAR, K&#x00C4;NSLOF OCH BETEENDEN</text>
+		</navLabel>
+		<content src="chap04.html"/>
+	</navPoint>
+<navPoint id="navpoint-6" playOrder="6">
+		<navLabel>
+			<text>BLI DIN EGEN HYPNOTIS&#x00D6;R</text>
+		</navLabel>
+		<content src="chap05.html"/>
+	</navPoint>
+<navPoint id="navpoint-7" playOrder="7">
+		<navLabel>
+			<text>VAD VILL DU F&#x00D6;R&#x00C4;NDRA?</text>
+		</navLabel>
+		<content src="chap06.html"/>
+	</navPoint>
+<navPoint id="navpoint-8" playOrder="8">
+		<navLabel>
+			<text>F&#x00D6;R&#x00C4;NDRING P&#x00C5;G&#x00C5;R &#x002D; HYPNOSTEKNIKER F&#x00D6;R HEMMABRUK</text>
+		</navLabel>
+		<content src="chap07.html"/>
+	</navPoint>
+<navPoint id="navpoint-9" playOrder="9">
+		<navLabel>
+			<text>&#x00D6;VNINGSBANK</text>
+		</navLabel>
+		<content src="chap08.html"/>
+	</navPoint>
+<navPoint id="navpoint-10" playOrder="10">
+		<navLabel>
+			<text>HYPNOS &#x2013; ANV&#x00C4;NDBART TILL DET MESTA</text>
+		</navLabel>
+		<content src="chap09.html"/>
+	</navPoint>
+<navPoint id="navpoint-11" playOrder="11">
+		<navLabel>
+			<text>N&#x00C5;GRA SISTA ORD &#x2026;</text>
+		</navLabel>
+		<content src="chap10.html"/>
+	</navPoint>
+<navPoint id="navpoint-12" playOrder="12">
+		<navLabel>
+			<text>Copyright</text>
+		</navLabel>
+		<content src="copyright.html"/>
+	</navPoint>
+</navMap>
+</ncx>

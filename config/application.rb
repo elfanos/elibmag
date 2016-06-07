@@ -20,7 +20,82 @@ module Elibmag
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.middleware.insert_before "Rack::Sendfile", "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
+    # config.middleware.insert_before 0, "Rack::Cors" do
+    #   allow do
+    #     origins '*'
+    #     resource '*', :headers => :any, :methods => [:get, :post, :options]
+    #   end
+    # end
+
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+  #   config.active_record.raise_in_transactional_callbacks = true
+  #
+  #   # Configurate cors access and output
+  #   #config.middleware.insert_after Rails::Rack::Logger, Rack::Cors, :logger => Rails.logger
+  #
+  #   # Rails 3/4
+  #   config.middleware.insert_before 0, "Rack::Cors", :debug => true, :logger => (-> { Rails.logger }) do
+  #     allow do
+  #       origins '*'
+  #
+  #       resource '*',
+  #         :headers => :any,
+  #         :methods => [:post],
+  #         :credentials => true,
+  #         :max_age => 0
+  #
+  #       resource '*',
+  #         :headers => :any,
+  #         :methods => [:get, :post, :delete, :put, :patch, :options, :head],
+  #         :max_age => 0
+  #     end
+  #   end
+  #
+  #   config.middleware.insert_before 0, Rack::Cors, :debug => true, :logger => (-> { Rails.logger }) do
+  #     allow do
+  #       origins '*'
+  #
+  #       resource '*',
+  #         :headers => :any,
+  #         :methods => [:post],
+  #         :credentials => true,
+  #         :max_age => 0
+  #
+  #       resource '*',
+  #         :headers => :any,
+  #         :methods => [:get, :post, :delete, :put, :patch, :options, :head],
+  #         :max_age => 0
+  #     end
+  #   end
+  #   config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+  #     allow do
+  #   origins ""
+  #   resource "", :headers => [:any, :origin], :methods => [:get, :post, :options]
+  #   end
+  # end
+
+
+
+    # config.middleware.insert_before ActionDispatch::Static, "Rack::Cors" do
+    #   allow do
+    #     origins '*'
+    #     resource '*', :headers => :any, :methods => [:get, :post, :options]
+    #   end
+    # end
+    #
+    # # Rails 5
+    #
+    # config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
+    #   allow do
+    #     origins '*'
+    #     resource '*', :headers => :any, :methods => [:get, :post, :options]
+    #   end
+    # end
   end
 end

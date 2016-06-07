@@ -1,0 +1,2 @@
+module CorsControllerHelper
+end

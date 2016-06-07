@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require zip.min.js
+//= require jszip.js
 //= require epub.js
 //= require_tree .

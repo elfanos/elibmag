@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="2.0" unique-identifier="p9789185201099">
+<metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<dc:title>Barnen ifrån Frostmofjället - Provläsning</dc:title>
+			<dc:creator opf:role="aut" opf:file-as="Fitinghoff, Laura">Laura Fitinghoff</dc:creator>
+			<dc:identifier id="p9789185201099">9789185201099</dc:identifier>
+			<dc:type>Text</dc:type>
+			<dc:language>sv</dc:language>
+			<dc:publisher>Elib</dc:publisher>
+			<dc:date>2013</dc:date>
+			<dc:rights>All rights reserved</dc:rights>
+			<meta name="cover" content="My_Cover"/>
+	</metadata>
+	<manifest>
+	<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+	<item id="css" href="styles/stylesheet.css" media-type="text/css"/>
+	<item id="Cover" href="xhtml/cover.xhtml" media-type="application/xhtml+xml"/>
+        <item id="title" href="xhtml/title.xhtml" media-type="application/xhtml+xml"/>
+        <item id="copyright" href="xhtml/copyright.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter01" href="xhtml/01_chapter01.xhtml" media-type="application/xhtml+xml"/>
+        <item id="chapter02" href="xhtml/02_chapter02.xhtml" media-type="application/xhtml+xml"/>
+	<item id="koplank" href="xhtml/prov.xhtml" media-type="application/xhtml+xml"/>
+        <item id="My_Cover" href="images/cover.jpg" media-type="image/jpeg"/>
+</manifest>
+        <spine toc="ncx">
+<itemref idref="Cover"/>
+<itemref idref="title" />
+<itemref idref="copyright" />
+<itemref idref="chapter01" />
+<itemref idref="chapter02" />
+<itemref idref="koplank" />
+</spine>
+</package>

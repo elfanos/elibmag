@@ -1,4 +1,20 @@
 source 'https://rubygems.org'
+gem 'fog'
+
+gem 'aws-sdk-rails'
+
+gem 'aws-sdk-resources', '~> 2'
+
+gem 'aws-sdk-core', '~> 2.3', '>= 2.3.7'
+
+gem 'aws-sdk', '~> 2'
+
+gem 'rack-cors', :require => 'rack/cors'
+
+gem 'epub-parser'
+
+gem 'rubyzip'
+
 gem 'figaro'
 
 gem 'devise'
